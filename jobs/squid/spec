@@ -6,6 +6,8 @@ packages:
 templates:
   bin/squid:         bin/squid
   config/squid.conf: config/squid.conf
+  config/squid_ssl.cert: config/squid_ssl.cert
+  config/squid_ssl.key: config/squid_ssl.key  
 
 properties:
   port:
@@ -37,3 +39,10 @@ properties:
       http_access deny !Safe_ports
       http_access deny CONNECT !SSL_ports
       http_access allow localnet
+
+  squid_ssl.certificate:
+    description: |
+      Certificate used by the Squid server to serve TLS connections.
+  squid_ssl.private_key:
+    description: Private Key used by the squid server
+  
