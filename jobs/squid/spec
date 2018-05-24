@@ -14,6 +14,7 @@ properties:
     description: What port will clients need to connect to to access the proxy?
     default: 3128
 
+    
   acl:
     description: A complete Squid ACL block, as a multi-line string
     default: |
@@ -45,4 +46,9 @@ properties:
       Certificate used by the Squid server to serve TLS connections.
   squid_ssl.private_key:
     description: Private Key used by the squid server
+
+  custom_directives:
+    description: additional squid directives
+    default: ""
+
   
