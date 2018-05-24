@@ -5,6 +5,6 @@ CPUS=$(grep -c ^processor /proc/cpuinfo)
 tar -xjvf squid/squid-3.5.27.tar.bz2
 cd squid-3.5.27
 
-./configure --prefix ${BOSH_INSTALL_TARGET} --with-openssl  --enable-ssl --enable-ssl-crtd
+./configure --prefix ${BOSH_INSTALL_TARGET} --with-openssl  --enable-ssl --enable-ssl-crtd --with-default-user=vcap
 make -j$CPUS
 make install
