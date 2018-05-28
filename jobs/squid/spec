@@ -47,7 +47,7 @@ properties:
   squid_ssl.private_key:
     description: Private Key used by the squid server
 
-  custom_directives:
+  additional_directives:
     description: additional squid directives
     default: ""
 
